@@ -1,0 +1,52 @@
+### create user
+POST localhost:18080/kameleoon/users
+Content-Type: application/json
+
+{
+  "name": "bob",
+  "email": "bob@mail",
+  "password": "pass"
+}
+
+
+### get random quote
+GET localhost:18080/kameleoon/quotes
+
+### get quote by id
+GET localhost:18080/kameleoon/quotes/1
+
+### create quote
+POST localhost:18080/kameleoon/quotes
+Content-Type: application/json
+
+{
+  "id": null,
+  "content": "some quote",
+  "userId": 1
+}
+
+### edit quote
+PUT localhost:18080/kameleoon/quotes
+Content-Type: application/json
+
+{
+  "id": 1,
+  "content": "quote edited",
+  "userId": 1
+}
+
+### delete quote
+DELETE localhost:18080/kameleoon/quotes/1
+
+### top ten
+GET localhost:18080/kameleoon/quotes/top-ten
+
+### worse ten
+GET localhost:18080/kameleoon/quotes/worse-ten
+
+
+### upvote
+GET localhost:18080/kameleoon/votes/upvote/1
+
+### downvote
+GET localhost:18080/kameleoon/votes/downvote/1

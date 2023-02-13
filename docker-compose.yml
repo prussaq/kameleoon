@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  web:
+    container_name: kameleoon
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kameleoon-test:latest
+    ports:
+      - 18080:8080

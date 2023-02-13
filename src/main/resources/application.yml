@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:kameleoondb
+  h2:
+    console.enabled: true
+  jpa:
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  sql:
+    init:
+      data-locations: classpath:data/data.sql
+
+server:
+  port: 8080
+  servlet:
+    context-path: /kameleoon
